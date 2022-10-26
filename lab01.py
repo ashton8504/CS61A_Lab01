@@ -1,4 +1,4 @@
-def falling(first_parameter, last_parameter):
+def falling(n, k):
     """Compute the falling factorial of n to depth k.
 
     >>> falling(6, 3)  # 6 * 5 * 4
@@ -10,14 +10,13 @@ def falling(first_parameter, last_parameter):
     >>> falling(4, 0)
     1
     """
-    counter_start = 1
-    counter_stop = 0
-
-    while counter_stop <= last_parameter - 1:
-        counter_start = counter_start * (first_parameter - counter_stop)
-        counter_stop = counter_stop + 1
-
-    return counter_start
+    x = 1 
+    y = 0
+    
+    while y <= k -1:
+        x = x * (n - y)
+        y = y + 1
+    return x
 
 
 print(falling(4, 3))
